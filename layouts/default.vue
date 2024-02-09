@@ -11,7 +11,6 @@
             <ClientOnly>
                 <color-mode-selector />
             </ClientOnly>
-            
         </header>
 
         <main class="px-2 mt-10">
