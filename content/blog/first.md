@@ -1,19 +1,6 @@
-<!-- ---
-title: "first Readme page"
-description: "First Readme page"
-head:
-    meta:
-        - name: 'keywors'
-        content: 'nuxt, vue, content'
-        - name: 'robots'
-        content: 'index, follow'
-        - name: 'author'
-        content: 'LemonLabs'
-        - name: 'copyright'
-        content: '@2024 LemonLabs'
---- -->
 ---
 publishedAt: 2021-07-12 17:15:00
+toc: true
 ---
 
 # first Title

@@ -1,5 +1,5 @@
 <template>
-    <section class="not-prose font-mono">
+    <section class="not-prose font-mono max-w-none">
         <h2 class="text-2xl font-semibold mb-10">My Blogs</h2>
         <div class="column text-gray-400 text-sm">
             <div>Date</div>
@@ -7,7 +7,7 @@
         </div>
         <ul>
             <li v-for="post in posts" :key="post?._path">
-                <NuxtLink :to="post._path" class="column cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-800 ">
+                <NuxtLink :to="post?._path" class="column cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-800 ">
                     <div :class="{'dark:text-gray-600 text-gray-500': !post?.displayYear, 'text-gray-400 dark:text-gray-600': post?.displayYear}">{{ post?.year }}</div>
                     <div>{{ post?.title }}</div>
                 </NuxtLink>
@@ -19,8 +19,8 @@
 <script setup>
     const {data} = await useAsyncData(
         'blog-list', ()=> queryContent('/blog')
-        .where({_path: {$ne: '/blog'}})
-        .only(['path', 'title', 'publishedAt'])
+        .where({ _path: {$ne: '/blog'}})
+        .only(['_path', 'title', 'publishedAt'])
         .sort({publishedAt: -1})
         .find()
     )
@@ -41,6 +41,8 @@
         }
         return result
     })
+
+    console.log(posts)
 
     
 </script>

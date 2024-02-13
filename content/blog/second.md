@@ -1,3 +1,9 @@
+---
+title: "Second readme page"
+publishedAt: 2022-07-12 17:15:00
+toc: true
+---
+
 <!-- ---
 title: "Second Readme page"
 description: "First Readme page"
@@ -12,9 +18,6 @@ head:
         - name: 'copyright'
             content: '@2024 LemonLabs'
 --- -->
----
-publishedAt: 2022-07-12 17:15:00
----
 
 # Second Title
 
