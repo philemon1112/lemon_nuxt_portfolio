@@ -1,7 +1,9 @@
 <template>
     <div class="flex items-center space-x-2">
         <div class="text-gray-400 text-xs" v-if="showNextModelabel">Change to {{ nextMode }}</div>
-        <button @click="toggleMode" @mouseenter="showNextModelabel = true" @mouseleave="showNextModelabel = false" class="px-2 hover:bg-gray-100 dark:hover:bg-gray-600 py-1 text-gray-500">{{ nextModeItem }}</button>
+        <button @click="toggleMode" @mouseenter="showNextModelabel = true" @mouseleave="showNextModelabel = false" class="px-2 hover:bg-gray-100 dark:hover:bg-gray-600 py-1 text-gray-500 text-2xl md:text-base">
+            {{ nextModeItem }}
+        </button>
     </div>
 </template>
 
